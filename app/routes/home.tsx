@@ -1,5 +1,7 @@
+import EditorPane from "~/components/editor-pane";
+import SideBar from "~/components/side-bar";
+import Toolbar from "~/components/tool-bar";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +11,17 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <div className="grid min-h-screen grid-cols-12">
+      <div className="col-span-2">
+        <SideBar />
+      </div>
+      <div className="col-span-2">
+        <Toolbar />
+      </div>
+      <div className="col-span-8 p-4">
+        <EditorPane />
+      </div>
+    </div>
+  );
 }
