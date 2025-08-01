@@ -17,21 +17,21 @@ const TextPanel = () => {
     <div className="flex flex-col space-y-2 p-4 text-sm">
       <button
         type="button"
-        className="rounded bg-gray-400 p-2 text-white hover:bg-blue-600"
+        className="rounded bg-gray-100 p-2 text-black hover:bg-gray-900 hover:text-white"
         onClick={() => handleAddBlock("heading")}
       >
         Add Heading
       </button>
       <button
         type="button"
-        className="rounded bg-gray-400 p-2 text-white hover:bg-green-600"
+        className="rounded bg-gray-100 p-2 text-black hover:bg-gray-900 hover:text-white"
         onClick={() => handleAddBlock("subheading")}
       >
         Add Sub Heading
       </button>
       <button
         type="button"
-        className="rounded bg-gray-400 p-2 text-white hover:bg-red-600"
+        className="rounded bg-gray-100 p-2 text-black hover:bg-gray-900 hover:text-white"
         onClick={() => handleAddBlock("paragraph")}
       >
         Add Paragraph

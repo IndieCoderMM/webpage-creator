@@ -41,21 +41,21 @@ const ToolbarPlugin = () => {
   const inactive = "bg-white text-gray-700";
 
   return (
-    <div className="mb-2 flex w-fit items-center overflow-hidden rounded border border-gray-500">
+    <div className="mb-2 flex w-fit items-center overflow-hidden rounded border border-gray-700">
       <button
         onClick={() => format("bold")}
         className={`${baseBtn} ${isBold ? active : inactive}`}
       >
         B
       </button>
-      <div className="mx-1 h-6 w-px bg-gray-900" />
+      <div className="w-px self-stretch bg-gray-700" />
       <button
         onClick={() => format("italic")}
         className={`${baseBtn} ${isItalic ? active : inactive}`}
       >
         I
       </button>
-      <div className="mx-1 h-6 w-px bg-gray-900" />
+      <div className="w-px self-stretch bg-gray-700" />
       <button
         onClick={() => format("underline")}
         className={`${baseBtn} ${isUnderline ? active : inactive}`}

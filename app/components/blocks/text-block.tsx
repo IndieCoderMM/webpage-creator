@@ -16,28 +16,33 @@ const TextBlock = ({ block }: TextBlockType) => {
   };
 
   return (
-    <div className="mb-4 rounded border border-gray-200 bg-white p-4 shadow-sm">
-      {isEditing ? (
-        <button
-          onClick={() => setIsEditing(false)}
-          className="mb-2 text-sm text-blue-500"
-        >
-          Save
-        </button>
-      ) : (
-        <button
-          onClick={() => setIsEditing(true)}
-          className="mb-2 text-sm text-blue-500"
-        >
-          Edit
-        </button>
-      )}
+    <div className="mb-4 rounded border border-gray-200 bg-white p-2 shadow-sm">
+      <div className="mb-2 flex items-center justify-between">
+        <h2 className="rounded bg-gray-200 px-1 py-px text-xs capitalize">
+          {block.type}
+        </h2>
+        {isEditing ? (
+          <button
+            onClick={() => setIsEditing(false)}
+            className="mb-2 text-sm text-blue-500"
+          >
+            Save
+          </button>
+        ) : (
+          <button
+            onClick={() => setIsEditing(true)}
+            className="mb-2 text-sm text-blue-500"
+          >
+            Edit
+          </button>
+        )}
+      </div>
       {isEditing ? (
         <ParagraphEditor
           onChange={(json) => {
             handleContentChange(JSON.stringify(json));
           }}
-          initialJson={block.content ? JSON.parse(block.content) : undefined}
+          initialJson={block.content ?? undefined}
         />
       ) : (
         <div className="text-gray-700">

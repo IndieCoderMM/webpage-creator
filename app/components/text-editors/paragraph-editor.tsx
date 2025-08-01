@@ -22,7 +22,9 @@ const ParagraphEditor = ({ onChange, initialJson }: ParagraphEditorProps) => {
     <LexicalComposer initialConfig={initialConfig}>
       <ToolbarPlugin />
       <RichTextPlugin
-        contentEditable={<ContentEditable className="bg-gray-100" />}
+        contentEditable={
+          <ContentEditable className="rounded-md border border-gray-100 bg-gray-50 p-2" />
+        }
         ErrorBoundary={() => <div className="">An error occurred</div>}
       />
       {onChange && (

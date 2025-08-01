@@ -12,14 +12,14 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-cols-12">
+    <div className="grid h-screen grid-cols-12 overflow-hidden">
       <div className="col-span-2">
         <SideBar />
       </div>
       <div className="col-span-2">
         <Toolbar />
       </div>
-      <div className="col-span-8 p-4">
+      <div className="col-span-8 overflow-y-auto p-4">
         <EditorPane />
       </div>
     </div>

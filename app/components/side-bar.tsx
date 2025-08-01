@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppStore } from "~/lib/store";
 
 const SideBar = () => {
@@ -13,8 +12,10 @@ const SideBar = () => {
           <button
             type="button"
             onClick={() => setActiveTool("text")}
-            className={`p-2 w-full bg-neutral-300 text-black rounded hover:bg-neutral-600 hover:text-white ${
-              activeTool === "text" ? "bg-sky-300 text-black" : ""
+            className={`w-full rounded p-2 text-black ${
+              activeTool === "text"
+                ? "bg-blue-100 text-blue-600"
+                : "bg-neutral-300 hover:bg-neutral-600 hover:text-white"
             }`}
           >
             Texts
@@ -24,8 +25,10 @@ const SideBar = () => {
           <button
             type="button"
             onClick={() => setActiveTool("video")}
-            className={`p-2 w-full bg-neutral-300 text-black rounded hover:bg-neutral-600 hover:text-white ${
-              activeTool === "video" ? "bg-sky-300 text-black" : ""
+            className={`w-full rounded p-2 text-black ${
+              activeTool === "video"
+                ? "bg-blue-100 text-blue-600"
+                : "bg-neutral-300 hover:bg-neutral-600 hover:text-white"
             }`}
           >
             Videos
@@ -35,8 +38,10 @@ const SideBar = () => {
           <button
             type="button"
             onClick={() => setActiveTool("playlist")}
-            className={`p-2 w-full bg-neutral-300 text-black rounded hover:bg-neutral-600 hover:text-white ${
-              activeTool === "playlist" ? "bg-sky-300 text-black" : ""
+            className={`w-full rounded p-2 text-black ${
+              activeTool === "playlist"
+                ? "bg-blue-100 text-blue-600"
+                : "bg-neutral-300 hover:bg-neutral-600 hover:text-white"
             }`}
           >
             Playlists

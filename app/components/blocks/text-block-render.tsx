@@ -22,9 +22,6 @@ const TextBlockRender = ({ block }: { block: TextBlock }) => {
 
   return (
     <div className="relative mb-4 flex gap-1">
-      <h2 className="rounded bg-gray-200 px-2 py-1 text-xs">
-        {block.type.charAt(0).toUpperCase() + block.type.slice(1)}
-      </h2>
       <div className="text-gray-700">
         {htmlContent ? (
           <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
