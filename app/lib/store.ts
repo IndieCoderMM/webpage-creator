@@ -8,6 +8,6 @@ interface AppStore {
 }
 
 export const useAppStore = create<AppStore>()((set) => ({
-  activeTool: "text",
+  activeTool: "page",
   setActiveTool: (tool) => set({ activeTool: tool }),
 }));

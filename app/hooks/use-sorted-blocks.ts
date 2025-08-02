@@ -17,6 +17,8 @@ export const useSortedBlocks = () => {
 
   const handleSort = useCallback(
     (activeId: UniqueIdentifier, overId: UniqueIdentifier) => {
+      if (!sortedBlocks.length) return;
+
       const blocks = [...sortedBlocks];
       const activeIndex = blocks.findIndex((block) => block.id === activeId);
       const overIndex = blocks.findIndex((block) => block.id === overId);
