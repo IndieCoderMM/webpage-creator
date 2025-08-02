@@ -11,6 +11,19 @@ const SideBar = () => {
         <li className="">
           <button
             type="button"
+            onClick={() => setActiveTool("page")}
+            className={`w-full rounded p-2 text-black ${
+              activeTool === "page"
+                ? "bg-blue-100 text-blue-600"
+                : "bg-neutral-300 hover:bg-neutral-600 hover:text-white"
+            }`}
+          >
+            Page
+          </button>
+        </li>
+        <li className="">
+          <button
+            type="button"
             onClick={() => setActiveTool("text")}
             className={`w-full rounded p-2 text-black ${
               activeTool === "text"

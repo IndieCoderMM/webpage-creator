@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-type ToolType = "text" | "video" | "playlist";
+type ToolType = "text" | "video" | "playlist" | "page";
 
 interface AppStore {
   activeTool: ToolType;

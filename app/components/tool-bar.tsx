@@ -1,5 +1,6 @@
 import { usePageStore } from "~/lib/page.store";
 import { useAppStore } from "~/lib/store";
+import PagePanel from "./tools/page-panel";
 import PlaylistPanel from "./tools/playlist-panel";
 import TextPanel from "./tools/text-panel";
 import VideoPanel from "./tools/video-panel";
@@ -20,7 +21,9 @@ const Toolbar = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
       </div>
-      {activeTool === "text" ? (
+      {activeTool === "page" ? (
+        <PagePanel />
+      ) : activeTool === "text" ? (
         <TextPanel />
       ) : activeTool === "video" ? (
         <VideoPanel />
