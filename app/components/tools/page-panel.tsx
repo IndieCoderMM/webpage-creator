@@ -11,7 +11,7 @@ const PagePanel = () => {
     console.log(`Block with id ${id} removed`);
   };
 
-  if (blocks.length >= 0) {
+  if (blocks.length === 0) {
     return (
       <div className="p-2">
         <div className="w-full rounded-md border border-dashed p-2 text-gray-400">
