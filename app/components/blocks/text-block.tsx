@@ -9,10 +9,19 @@ type TextBlockType = {
 
 const TextBlock = ({ block }: TextBlockType) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [content, setContent] = useState(block.content || "");
   const updateBlock = usePageStore((state) => state.updateBlock);
 
   const handleContentChange = (content: string) => {
-    updateBlock(block.id, { ...block, content });
+    setContent(content);
+  };
+
+  const handleSave = () => {
+    updateBlock(block.id, {
+      ...block,
+      content: content,
+    });
+    setIsEditing(false);
   };
 
   return (
@@ -22,10 +31,7 @@ const TextBlock = ({ block }: TextBlockType) => {
           {block.type}
         </h2>
         {isEditing ? (
-          <button
-            onClick={() => setIsEditing(false)}
-            className="mb-2 text-sm text-blue-500"
-          >
+          <button onClick={handleSave} className="mb-2 text-sm text-blue-500">
             Save
           </button>
         ) : (
